@@ -53,4 +53,34 @@ form button {
     background-color: #e94560; /* Un color de acción fuerte (rojo/rosa) */
     color: white;
     font-size: 1.1em;
-    font
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto al pasar el ratón (Hover) y al hacer click (Active) en el botón */
+form button:hover {
+    background-color: #ff6e87; /* Color un poco más claro al pasar el ratón */
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.5);
+}
+
+form button:active {
+    background-color: #d1304a; /* Color más oscuro al presionar */
+    transform: translateY(1px); /* Efecto de "clic" */
+}
+
+/* Opcional: Agrupar etiqueta e input para mejor manejo del espacio */
+/* Puedes envolver cada par <label> + <input> en un div, si lo prefieres */
+/* Por ejemplo:
+    <div class="form-group">
+        <label>...</label>
+        <input>...
+    </div>
+*/
+/* .form-group {
+    margin-bottom: 20px;
+} */
