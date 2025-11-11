@@ -1,0 +1,11 @@
+<div>
+    <form #createForm="ngForm" (ngSubmit)="crearDepartamento()">
+        <label>Numero</label>
+        <input type="number" name="cajanumero" #cajanumero="ngModel" [(ngModel)]="departamento.numero"/>
+        <label>Nombre</label>
+        <input type="text" name="cajanombre" #cajanombre="ngModel" [(ngModel)]="departamento.nombre"/>
+        <label>Localidad</label>
+        <input type="text" name="cajalocalidad" #cajalocalidad="ngModel" [(ngModel)]="departamento.localidad"/>
+        <button>Insertar departamento</button>
+    </form>
+</div>

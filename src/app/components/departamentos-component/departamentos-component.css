@@ -1,0 +1,73 @@
+/* Estilos generales para el contenedor de la tabla y el título si no están definidos en Bootstrap */
+.container {
+    background-color: #1a1a2e; /* Fondo oscuro para contrastar si no lo hace el body */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.text-white {
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Estilos de la tabla moderna --- */
+
+.modern-table {
+    width: 100%;
+    border-collapse: separate; /* Permite border-radius en la tabla/celdas */
+    border-spacing: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+    border-radius: 8px; /* Bordes redondeados para toda la tabla */
+    overflow: hidden; /* Asegura que los bordes redondeados se apliquen al contenido interno */
+}
+
+/* Estilo del encabezado (<thead>) */
+.modern-table thead {
+    background-color: #0f3460; /* Color primario oscuro */
+    color: #f0f0f0; /* Texto claro */
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modern-table th {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 2px solid #16213e; /* Separador sutil */
+    font-weight: 600;
+}
+
+/* Estilo del cuerpo de la tabla (<tbody>) */
+.modern-table tbody {
+    background-color: #16213e; /* Fondo del cuerpo un poco más claro que el contenedor */
+    color: #e0e0e0; /* Color de texto para el cuerpo */
+}
+
+.modern-table td {
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador de fila más sutil */
+}
+
+/* Efecto de cebra: Estilos para filas pares */
+.modern-table tbody tr:nth-child(even) {
+    background-color: #1a2a47; /* Color alterno para filas pares */
+}
+
+/* Efecto hover: Cambio de color al pasar el ratón por la fila */
+.modern-table tbody tr:hover {
+    background-color: #2c5282; /* Color al pasar el ratón */
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Opcional: Estilo para la primera columna (scope="row") si quieres darle énfasis */
+.modern-table td[scope="row"] {
+    font-weight: bold;
+    color: #70a1ff; /* Color para destacar el número de departamento */
+}
+
+/* Remover el borde inferior de la última fila */
+.modern-table tbody tr:last-child td {
+    border-bottom: none;
+}

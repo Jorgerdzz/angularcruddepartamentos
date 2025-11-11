@@ -1,0 +1,30 @@
+<div class="container py-5">
+    <h2 class="text-white mb-4">Listado de Departamentos</h2>
+    <div
+        class="table-responsive"
+    >
+        <!-- Hemos sustituido table-primary por modern-table -->
+        <table
+            class="table modern-table"
+        >
+            <thead>
+                <tr>
+                    <th scope="col">Numero</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Localidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- No he tocado la lógica de Angular '@for' -->
+                @for(departamento of departamentos; track departamento){
+                    <tr class="">
+                        <td scope="row">{{departamento.numero}}</td>
+                        <td>{{departamento.nombre}}</td>
+                        <td>{{departamento.localidad}}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    
+</div>

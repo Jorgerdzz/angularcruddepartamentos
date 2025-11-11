@@ -1,0 +1,31 @@
+
+<nav class="navbar navbar-expand-lg modern-navbar">
+  <div class="container-fluid">
+    <!-- El "text-white" de Bootstrap ayuda a que el texto del logo se vea bien en fondo oscuro -->
+    <a class="navbar-brand text-white" [routerLink]="['/']">Navbar</a>
+    
+    <!-- Botón de colapso para móviles, mantenemos la estructura de Bootstrap -->
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Icono de la hamburguesa, lo estilizaré en el CSS -->
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <!-- Clase custom para estilizar los enlaces -->
+          <a class="nav-link nav-link-custom active" aria-current="page" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" [routerLink]="['/create']">New departamento</a>
+        </li>
+      </ul>
+      
+      <!-- Barra de búsqueda con estilos personalizados -->
+      <form class="d-flex modern-search-form" role="search">
+        <input class="form-control me-2 modern-input" type="search" placeholder="Buscar..." aria-label="Search"/>
+        <button class="btn btn-primary modern-btn" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,56 @@
+/* --- Estilos del Formulario Moderno --- */
+
+/* Contenedor principal del formulario */
+form {
+    max-width: 450px; /* Ancho máximo para que no se estire demasiado */
+    margin: 40px auto; /* Centrar en la página */
+    padding: 30px;
+    background-color: #16213e; /* Color de fondo oscuro, similar a las filas de la tabla */
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Sombra más profunda */
+    display: flex;
+    flex-direction: column; /* Organizar elementos verticalmente */
+    gap: 15px; /* Espacio entre los elementos del formulario */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo para las etiquetas (Labels) */
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #e0e0e0; /* Texto claro */
+    font-size: 1em;
+}
+
+/* Estilo para los campos de entrada (Inputs) */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #0f3460; /* Borde con color primario */
+    border-radius: 6px;
+    background-color: #0f1c3a; /* Fondo del input muy oscuro */
+    color: #f0f0f0; /* Texto del input claro */
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+}
+
+/* Efecto al hacer foco (Focus) en los inputs */
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #70a1ff; /* Color de enfoque brillante */
+    box-shadow: 0 0 10px rgba(112, 161, 255, 0.4);
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+    background-color: #0f1c3a; /* Mantiene el fondo oscuro */
+}
+
+/* Estilo del botón (Button) */
+form button {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #e94560; /* Un color de acción fuerte (rojo/rosa) */
+    color: white;
+    font-size: 1.1em;
+    font
