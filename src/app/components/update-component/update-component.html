@@ -1,0 +1,47 @@
+
+<div class="d-flex justify-content-center align-items-center mt-5">
+    <form #updateForm="ngForm" (ngSubmit)="updateDepartamento()">
+        
+        <div class="form-group">
+            <label for="cajanumero">Número:</label>
+            <input 
+                type="number" 
+                id="cajanumero" 
+                name="cajanumero" 
+                value="{{departamento.numero}}" 
+                #cajanumero="ngModel" 
+                [(ngModel)]="departamento.numero" 
+                disabled
+            />
+        </div>
+        
+        <div class="form-group">
+            <label for="cajanombre">Nombre:</label>
+            <input 
+                type="text" 
+                id="cajanombre" 
+                name="cajanombre" 
+                value="{{departamento.nombre}}" 
+                #cajanombre="ngModel" 
+                [(ngModel)]="departamento.nombre"
+            />
+        </div>
+        
+        <div class="form-group">
+            <label for="cajalocalidad">Localidad:</label>
+            <input 
+                type="text" 
+                id="cajalocalidad" 
+                name="cajalocalidad" 
+                value="{{departamento.localidad}}" 
+                #cajalocalidad="ngModel" 
+                [(ngModel)]="departamento.localidad"
+            />
+        </div>
+        
+        <button type="submit" class="btn">
+            Modificar departamento
+        </button>
+        
+    </form>
+</div>

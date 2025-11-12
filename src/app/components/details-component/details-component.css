@@ -1,0 +1,87 @@
+/* Paleta de colores consistente:
+   Fondo: #16213e (Oscuro principal)
+   Borde/Acceento: #0f3460 (Oscuro secundario)
+   Resalte: #e94560 (Rojo/Rosa de acento)
+   Texto Claro: #f0f0f0
+*/
+
+/* --- Estilo del Enlace "Go to home" --- */
+.modern-link {
+    color: #e94560; /* Color de acento */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.modern-link:hover {
+    color: #ff6e87;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+/* --- Estilo de la Tarjeta del Departamento --- */
+.department-card {
+    width: 100%;
+    max-width: 400px; /* Tamaño fijo para que se vea como una tarjeta individual */
+    
+    /* Colores y bordes */
+    background-color: #16213e; 
+    border: none; /* Quitamos el borde predeterminado de Bootstrap */
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7); /* Sombra más profunda y bonita */
+    
+    /* Animación */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; 
+}
+
+.department-card:hover {
+    transform: translateY(-8px); /* Levantamiento más notable */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9); 
+}
+
+/* Título de la tarjeta */
+.department-card .card-title {
+    font-weight: 300; /* Fuente más ligera */
+    color: #f0f0f0;
+    font-size: 1.8rem;
+}
+
+/* Etiqueta para el número de departamento */
+.bg-accent {
+    background-color: #e94560 !important; /* Usamos el color de acento */
+    font-size: 1.1rem;
+    padding: .35em .8em;
+}
+
+/* Lista de detalles */
+.department-details {
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.department-details li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador sutil */
+    display: flex;
+    justify-content: space-between;
+}
+
+.department-details li:last-child {
+    border-bottom: none;
+}
+
+/* Etiquetas (Nombre:, Localidad:) */
+.department-details .detail-label {
+    font-weight: 400;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Valores (el dato) */
+.department-details .detail-value {
+    font-weight: 600;
+    color: #70a1ff; /* Color para destacar los datos importantes */
+    text-align: right;
+}

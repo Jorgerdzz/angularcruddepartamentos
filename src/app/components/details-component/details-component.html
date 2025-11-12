@@ -1,1 +1,30 @@
-<p>details-component works!</p>
+
+<div class="d-flex justify-content-center align-items-center mt-5">
+
+    <div class="card department-card shadow-lg p-3">
+        <div class="card-body">
+            
+            <div class="mb-4 text-center">
+                <a [routerLink]="['/']" class="modern-link">
+                    <i class="fas fa-home me-2"></i> Go to home
+                </a>
+            </div>
+
+            <h3 class="card-title text-center mb-4">
+                Departamento <span class="badge rounded-pill bg-accent">{{departamento.numero}}</span>
+            </h3>
+            
+            <ul class="list-unstyled department-details">
+                <li>
+                    <span class="detail-label">Nombre:</span> 
+                    <span class="detail-value">{{departamento.nombre}}</span>
+                </li>
+                <li>
+                    <span class="detail-label">Localidad:</span> 
+                    <span class="detail-value">{{departamento.localidad}}</span>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>

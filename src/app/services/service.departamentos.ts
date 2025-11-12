@@ -16,6 +16,13 @@ export class ServiceDepartamento{
         return departamentos;
     }
 
+    getDepartamento(id: number): Promise<Departamento>{
+        let url = environment.urlApiDepartamentos;
+        let request = "api/Departamentos/" + id;
+        const departamento = fetch(url + request).then(response=>response.json());
+        return departamento;
+    }
+
     createDepartamento(departamento: Departamento): Observable<any>{
         let json = JSON.stringify(departamento);
         let header = new HttpHeaders();
@@ -24,5 +31,22 @@ export class ServiceDepartamento{
         let request = "api/Departamentos";
         return this._http.post(url + request, json, {headers:header})
     }
+
+    updateDepartamento(departamento: Departamento): Observable<any>{
+        let url = environment.urlApiDepartamentos;
+        let request = "api/Departamentos";
+        let json = JSON.stringify(departamento);
+        let header = new HttpHeaders();
+        header = header.set("Content-type", "application/json");
+        return this._http.put(url + request, json, {headers: header})
+    }
+
+    deleteDepartamento(id: number): Observable<any>{
+        let url = environment.urlApiDepartamentos;
+        let request = "api/Departamentos/" + id;
+        return this._http.delete(url + request)
+    }
+
+    
 
 }
